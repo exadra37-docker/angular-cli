@@ -34,6 +34,11 @@ To uninstall just follow detailed instructions from [here](https://gitlab.com/ex
 See usage examples [here](https://gitlab.com/exadra37-docker-images/angular-cli/blob/master/docs/how-to/use.md).
 
 
+## EXAMPLES
+
+* [HELLO APP](https://gitlab.com/exadra37-docker-images/angular-cli/blob/master/docs/examples/hello-app.md).
+
+
 ## CONTRIBUTING IN ISSUES / MERGE REQUESTS
 
 All contributions are welcome provided that they follow [Contributing Guidelines](https://gitlab.com/exadra37-docker-images/angular-cli/blob/master/CONTRIBUTING.md), where you can find
