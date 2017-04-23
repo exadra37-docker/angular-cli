@@ -1,0 +1,21 @@
+{
+    "name": "exadra37-docker-images/angular-cli",
+    "description": "Official Node image with my preferred Shell, ZSH with Oh My Zsh.",
+    "keywords": [
+        "Exadra37",
+        "node",
+        "docker",
+        "node zsh",
+        "npm"
+    ],
+    "homepage": "https://gitlab.com/exadra37-docker-images/angular-cli",
+    "license": "GPL-3.0",
+    "authors": [
+        {
+            "name": "Paulo Silva",
+            "email": "exadra37@gmail.com",
+            "homepage": "https://exadra37.com",
+            "role": "Software Developer"
+        }
+    ]
+}

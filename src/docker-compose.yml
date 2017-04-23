@@ -1,0 +1,66 @@
+version: "2"
+
+services:
+
+########################################################################################################################
+# BUILD DOCKER IMAGES
+########################################################################################################################
+#
+# All Docker images we want to build locally for development.
+#
+###
+
+  # The node Official image with my preferred shell, ZSH with OhMyZsh, plus GIT and CURL
+  angular-cli-image:
+    build:
+      context: ./build
+      args:
+        ANGULAR_CLI_TAG: ${ANGULAR_CLI_TAG}
+        NODE_EXPOSE_PORT: ${NODE_EXPOSE_PORT}
+    image: ${IMAGE_NAME}:${IMAGE_TAG}
+
+
+########################################################################################################################
+# DEVELOPMENT
+########################################################################################################################
+#
+# All Containers we may want to run in Development.
+#
+###
+
+  # Builds the container with a OhMyZsh shell to work with the Angular CLI, NPM and all NODE have to offer.
+  #
+  # Check README for usage examples.
+  angular-cli:
+    image: ${IMAGE_NAME}:${IMAGE_TAG}
+    depends_on:
+      - angular-cli-image
+    user: node
+    ports:
+      - ${HOST_PORT}:${NODE_EXPOSE_PORT}
+    volumes_from:
+      - workspace
+    command: zsh
+
+  # Builds a Container that gives us a NODE CLI interface.
+  #
+  # Check README for Usage examples
+  node-cli:
+    image: ${IMAGE_NAME}:${IMAGE_TAG}
+    depends_on:
+      - angular-cli-image
+    command: node
+
+  # Just useful if you want to take a look how things are set-up at root level.
+  # Any change done here will not affect the other containers.
+  root-user:
+    image: ${IMAGE_NAME}:${IMAGE_TAG}
+    depends_on:
+      - angular-cli-image
+
+  # Where the code of our App lives.
+  # Used by other Containers that need to work with the App Code.
+  workspace:
+    image: tianon/true
+    volumes:
+      - ${WORKSPACE_DIR}:/home/node/workspace
