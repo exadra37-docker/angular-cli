@@ -2,7 +2,7 @@
 
 This are some of the ways we can use this image, but is not an exhaustive list of commands we can run against it.
 
-You may want to the [Hello App](https://gitlab.com/exadra37-docker-images/angular-cli/blob/master/docs/examples/hello-app.md) example.
+You may want to try the [Hello App](https://gitlab.com/exadra37-docker-images/angular-cli/blob/master/docs/examples/hello-app.md) example.
 
 All commands we will run from this examples assumes that:
 
