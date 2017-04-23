@@ -25,7 +25,10 @@ cd ~/Developer/Acme/Angular2/HelloApp
 git clone git@gitlab.com:exadra37-docker-images/angular-cli.git docker/angular-cli
 ```
 
-Ready to start using it, just see some usage examples [here](https://gitlab.com/exadra37-docker-images/angular-cli/blob/master/docs/how-to/use.md).
+Ready to start using it:
+
+* Try the [Hellop App](https://gitlab.com/exadra37-docker-images/angular-cli/blob/master/docs/examples/hello-app.md) example.
+* See how to use [here](https://gitlab.com/exadra37-docker-images/angular-cli/blob/master/docs/how-to/use.md).
 
 
 [HOME](https://gitlab.com/exadra37-docker-images/angular-cli)
